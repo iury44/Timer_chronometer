@@ -1,12 +1,72 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="assets/img/favicon.svg" type="image/x-icon">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
   <title>Chronometer</title>
 </head>
+
 <body>
-  
+  <div id="app-container">
+    <div id="app">
+
+      <section id="timer" class="flex">
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+      </section>
+
+      <section id="controls" class="flex">
+
+        <button data-action="toggleRunning" class="ph ph-play-circle">
+          <span class="sr-only">Iniciar Contador</span>
+        </button>
+
+        <button data-action="reset" class="ph ph-stop-circle secondary">
+          <span class="sr-only">Reiniciar Contador</span>
+        </button>
+        <button data-action="plus" class="ph ph-plus-circle secondary">
+          <span class="sr-only">Reiniciar Contador</span>
+        </button>
+        <button data-action="minus" class="ph ph-minus-circle secondary">
+          <span class="sr-only">Reiniciar Contador</span>
+        </button>
+
+      </section>
+
+    </div>
+    <div id="cards">
+      <div class="card">
+        <button data-action="tree" class="ph ph-tree">
+          <span class="sr-only">Sound Sun</span>
+        </button>
+      </div>
+      <div class="card">
+        <button data-action="rain" class="ph ph-cloud-snow">
+          <span class="sr-only">Sound Sun</span>
+        </button>
+      </div>
+      <div class="card">
+        <button data-action="coffe" class="">
+          <span class="sr-only">Sound Sun</span>
+        </button>
+      </div>
+      <div class="card">
+        <button data-action="fire" class="">
+          <span class="sr-only">Sound Sun</span>
+        </button>
+      </div>
+     
+
+    </div>
+
+  </div>
+
 </body>
+
 </html>

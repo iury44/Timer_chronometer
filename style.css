@@ -1,0 +1,105 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  
+  --text-color:hsl(var(--hue),40%,98%,1);
+  --background-cards :#E1E1E6;
+  --cards-hover : #02799D;
+  font-size:clamp(40%,1% + 2vw,62.5%) ;
+}
+.sr-only{
+  width: 1px;
+  height: 1px;
+
+  position: absolute;
+  overflow: hidden;
+  
+  margin: -1px;
+  padding: 0px;
+  appearance: none;
+}
+
+body{
+  color: var(--text-color);
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+#app-container{
+  display: flex;
+  flex-direction: row;
+  gap: 10rem;
+  
+  border-radius: 10px;
+}
+#app{
+  display: grid;
+  justify-items: center;
+
+
+}
+
+#timer{
+  margin-top: 3.0rem;
+  margin-left: 6rem;
+  font-size:7.6rem ;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+#controls{
+  margin-top:  -6rem;
+  margin-left: 6rem;
+  padding: .0rem 4rem;
+  gap: 0.9rem;
+  background-color: var(--controls-bg-color);
+  border-radius: 999rem;
+}
+
+button{
+
+  text-align: center;
+  background-color: transparent;
+  border: 0;
+  color: var(--primary-colors);
+  margin-right: 1.6rem;
+  cursor: pointer;
+  
+  font-size: 4.4rem;
+
+}
+#cards{
+  width: 30.0rem;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+ 
+
+}
+#cards .card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:1rem ;
+  width: 9rem;
+  height: 10.5rem;
+  border-radius: 10px;
+  background-color: var(--background-cards);
+  transition: 0.9s;
+}
+
+#cards .card:hover{
+  background-color: var(--cards-hover);
+  transition: 0.9s;
+}
+
+#cards button {
+  margin: auto;
+  cursor: pointer;
+}
