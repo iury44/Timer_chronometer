@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="assets/img/favicon.svg" type="image/x-icon">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script type="module" src="/src/main.js" defer ></script>
 
   <title>Chronometer</title>
 </head>
@@ -22,45 +23,53 @@
       </section>
 
       <section id="controls" class="flex">
-
+        <!-- Play -->
         <button data-action="toggleRunning" class="ph ph-play-circle">
           <span class="sr-only">Iniciar Contador</span>
         </button>
 
+        <!-- Stop -->
         <button data-action="reset" class="ph ph-stop-circle secondary">
           <span class="sr-only">Reiniciar Contador</span>
         </button>
+        <!-- Set -->
+        <button 
+        data-action='set'
+        class="ph ph-timer secondary">
+        <span class="sr-only">Ajustar Contador</span>
+      </button>
+
         <button data-action="plus" class="ph ph-plus-circle secondary">
-          <span class="sr-only">Reiniciar Contador</span>
+          <span class="sr-only">Add 5 minutos</span>
         </button>
         <button data-action="minus" class="ph ph-minus-circle secondary">
-          <span class="sr-only">Reiniciar Contador</span>
+          <span class="sr-only"> Remove 5 minutos</span>
         </button>
 
       </section>
 
     </div>
     <div id="cards">
-      <div class="card">
-        <button data-action="tree" class="ph ph-tree">
+      
+        <button data-action="tree" class="ph ph-tree secondary card">
           <span class="sr-only">Sound Sun</span>
         </button>
-      </div>
-      <div class="card">
-        <button data-action="rain" class="ph ph-cloud-snow">
+     
+      
+        <button data-action="rain" class="ph ph-cloud-snow secondary card">
           <span class="sr-only">Sound Sun</span>
         </button>
-      </div>
-      <div class="card">
-        <button data-action="coffe" class="">
+      
+      
+        <button data-action="coffe" class="ph ph-storefront secondary card">
           <span class="sr-only">Sound Sun</span>
         </button>
-      </div>
-      <div class="card">
-        <button data-action="fire" class="">
+      
+     
+        <button data-action="fire" class="ph ph-flame secondary card">
           <span class="sr-only">Sound Sun</span>
         </button>
-      </div>
+      
      
 
     </div>
