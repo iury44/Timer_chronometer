@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" class="">
 
 <head>
   <meta charset="UTF-8">
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <div id="app-container">
+
     <div id="app">
 
       <section id="timer" class="flex">
@@ -27,7 +27,12 @@
         <button data-action="toggleRunning" class="ph ph-play-circle">
           <span class="sr-only">Iniciar Contador</span>
         </button>
-
+        <!-- Pause -->
+        <button 
+          class="ph ph-pause-circle" 
+          data-action="toggleRunning">
+        <span class="sr-only">Pausar Contador</span>
+       </button>
         <!-- Stop -->
         <button data-action="reset" class="ph ph-stop-circle secondary">
           <span class="sr-only">Reiniciar Contador</span>
@@ -49,6 +54,7 @@
       </section>
 
     </div>
+    
     <div id="cards">
       
         <button data-action="tree" class="ph ph-tree secondary card">
@@ -73,8 +79,6 @@
      
 
     </div>
-
-  </div>
 
 </body>
 
