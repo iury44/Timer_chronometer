@@ -1,12 +1,14 @@
 import state from './state.js'
-import * as el from './elements.js'
 import * as timer from './timer.js' 
+import * as el from './elements.js'
+import * as sounds from './sounds.js'
 
 
 export function toggleRunning(){
   state.isRunning = document.documentElement.classList.toggle('running')
   timer.countDown()
 
+    sounds.buttonPressAudio.play()
 }
 
 
@@ -14,11 +16,15 @@ export function reset(){
   state.isRunning = false 
   document.documentElement.classList.remove('running')
   timer.updateDisplay()
+
+  sounds.buttonPressAudio.play()
 }
 
 export function set(){
   el.minutes.setAttribute('contenteditable', true)
+  el.seconds.contentext = '00'
   el.minutes.focus()
+  sounds.buttonPressAudio.play()
 }
 
 export function plus(){
@@ -26,12 +32,8 @@ export function plus(){
   if(upMinutes > 60){
     return state.minutes = 60
   }
- timer.updateDisplay()
-  
-/*  state.isRunning = true
- let upMinutes = state.minutes += 5
- upMinutes = upMinutes > 60 ? 60 : state.minutes
-timer.updateDisplay(upMinutes) */
+  timer.updateDisplay()
+  sounds.buttonPressAudio.play()
 }
 
 export function minus(){
@@ -40,5 +42,9 @@ export function minus(){
     return state.minutes = 0
   }
   timer.updateDisplay()
+  sounds.buttonPressAudio.play()
 }
 
+export function toggleMusic(){
+    
+}

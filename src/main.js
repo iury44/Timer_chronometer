@@ -3,4 +3,4 @@ import *  as Chronometer from './cronometer/chronometer.js'
 
 
 
-Chronometer.start(5,0)
+Chronometer.start(0,0)

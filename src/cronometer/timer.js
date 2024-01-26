@@ -24,7 +24,7 @@ export function countDown(){
 
     return
   }
-
+  updateDisplay(minutes,seconds)
    state.countdownId = setTimeout(()=> countDown(),1000)
 }
 
