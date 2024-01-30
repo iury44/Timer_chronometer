@@ -29,7 +29,7 @@ export function set(){
 
 export function plus(){
   let minutes = Number(el.minutes.textContent);
-  console.log(minutes);
+  
   minutes += 5;
 
   if (minutes > 60) {
