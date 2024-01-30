@@ -11,5 +11,7 @@ export const sounds = {
   rain: new Audio('./assets/sounds/Chuva.wav'),
   coffe: new Audio('./assets/sounds/Cafeteria.wav'),
 };
-
-sounds.loop = true
+sounds.tree.loop = true
+sounds.fire.loop = true
+sounds.rain.loop = true
+sounds.coffe.loop = true

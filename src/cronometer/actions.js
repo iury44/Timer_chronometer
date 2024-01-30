@@ -28,19 +28,26 @@ export function set(){
 }
 
 export function plus(){
- let upMinutes = state.minutes += state.plus
-  if(upMinutes > 60){
-    return state.minutes = 60
+  let minutes = Number(el.minutes.textContent);
+  console.log(minutes);
+  minutes += 5;
+
+  if (minutes > 60) {
+    minutes = 60; // Limite máximo de 60 minutos
   }
-  timer.updateDisplay()
-  sounds.buttonPressAudio.play()
+
+  state.minutes = minutes;
+  timer.updateDisplay();
+  sounds.buttonPressAudio.play();
 }
 
 export function minus(){
-  let downMinutes = state.minutes -= state.minus
-  if(downMinutes < 0){
-    return state.minutes = 0
+  let minutes = Number(el.minutes.textContent)
+  
+  if(minutes >= 5){
+    minutes -= 5
   }
+  state.minutes = minutes 
   timer.updateDisplay()
   sounds.buttonPressAudio.play()
 }
