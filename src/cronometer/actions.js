@@ -22,7 +22,7 @@ export function reset(){
 
 export function set(){
   el.minutes.setAttribute('contenteditable', true)
-  el.seconds.contentext = '00'
+  //el.seconds.contentext = '00'
   el.minutes.focus()
   sounds.buttonPressAudio.play()
 }
@@ -45,6 +45,32 @@ export function minus(){
   sounds.buttonPressAudio.play()
 }
 
-export function toggleMusic(){
-    
+
+
+export function toggleMusic(action) {
+ 
+  let currentAudio = null
+  const selectedSound = sounds.sounds[action];
+
+  if (!selectedSound) {
+    console.error(`Sound not found for action: ${action}`);
+    return;
+  }
+
+  if (currentAudio && currentAudio !== selectedSound) {
+    // Se houver um áudio em execução diferente do selecionado, pausa
+    currentAudio.pause();
+  }
+
+  if (selectedSound.paused) {
+    // Se o áudio selecionado estiver pausado, inicia
+    selectedSound.play();
+  } else {
+    // Se o áudio selecionado não estiver pausado, pausa
+    selectedSound.pause();
+  }
+
+  currentAudio = selectedSound;
+  
 }
+
