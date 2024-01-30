@@ -1,6 +1,6 @@
-import * as Chronometer from './cronometer/chronometer.js'
+import * as chronometer from './cronometer/chronometer.js'
 
 
 
 
-Chronometer.start(0,0)
+chronometer.start(0,0)
