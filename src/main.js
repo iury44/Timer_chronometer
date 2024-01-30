@@ -1,4 +1,4 @@
-import *  as Chronometer from './cronometer/chronometer.js'
+import * as Chronometer from './cronometer/chronometer.js'
 
 
 
